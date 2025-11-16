@@ -1,136 +1,165 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Aktar Samosa — Hot. Crisp. Legendary.</title>
-  <meta name="description" content="Aktar Samosa — fresh, hand-folded samosas made with love. Order now for piping-hot delivery or pickup." />
-  <style>
-    :root{
-      --accent:#ff3e7f;
-      --accent2:#ffb800;
-      --dark:#1f1f1f;
-      --muted:#555;
-    }
-    *{box-sizing:border-box}
-    body{
-      margin:0;
-      font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
-      background: linear-gradient(180deg,#fff0f8 0%, #ffe9c7 35%, #fff4d9 100%);
-      color:var(--dark);
-    }
-    .container{max-width:1100px;margin:48px auto;padding:24px}
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Aktar Samosa</title>
 
-    .hero{display:grid;grid-template-columns:1fr 420px;gap:28px;align-items:center}
-    @media (max-width:900px){.hero{grid-template-columns:1fr;}}
+<style>
+:root{
+  --primary:#e6396a;
+  --bg-light:#fff8f2;
+  --text-dark:#222;
+  --card-bg:#ffffff;
+  --shadow:0 4px 12px rgba(0,0,0,0.12);
+}
 
-    .badge{display:inline-block;padding:6px 12px;background:linear-gradient(90deg,var(--accent),var(--accent2));color:white;border-radius:999px;font-weight:600;font-size:13px}
-    h1{font-size:44px;margin:16px 0 8px;line-height:1.02;color:#e6396a}
-    p.lead{margin:0 0 18px;color:var(--muted);font-size:17px}
+body{
+  margin:0;
+  font-family:"Poppins",sans-serif;
+  background:var(--bg-light);
+  color:var(--text-dark);
+}
 
-    .cta-row{display:flex;gap:12px;flex-wrap:wrap}
-    .btn{display:inline-flex;align-items:center;gap:10px;padding:12px 18px;border-radius:14px;font-weight:700;border:0;cursor:pointer;transition:0.2s}
-    .btn-primary{background:linear-gradient(90deg,#ff3e7f,#ff7b00);color:#fff;box-shadow:0 6px 18px rgba(255,0,90,0.28);}    
-    .btn-primary:hover{transform:scale(1.04)}
-    .btn-ghost{background:rgba(255,255,255,0.5);border:2px solid rgba(31,31,31,0.06);}    
-    .btn-ghost:hover{transform:scale(1.04)}
+nav{
+  background:var(--card-bg);
+  padding:16px 32px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  box-shadow:var(--shadow);
+  position:sticky;
+  top:0;
+  z-index:100;
+}
 
-    .visual{display:flex;justify-content:center;align-items:center}
-    .card{background:linear-gradient(180deg,#ffffff 0%, #ffe7c0 100%);border-radius:22px;padding:22px;box-shadow:0 14px 30px rgba(15,15,15,0.12);} 
+nav a{
+  margin-left:22px;
+  text-decoration:none;
+  color:var(--text-dark);
+  font-weight:600;
+}
 
-    .highlights{display:flex;gap:14px;margin-top:22px}
-    .pill{background:#fff;padding:12px 16px;border-radius:14px;display:flex;flex-direction:column;align-items:flex-start;box-shadow:0 8px 20px rgba(16,16,16,0.06);border-left:6px solid var(--accent)}
-    .pill strong{font-size:19px;color:#ff3e7f}
-    .pill span{color:var(--muted);font-size:13px}
+.hero{
+  text-align:center;
+  padding:80px 20px;
+}
 
-    .menu{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:28px}
-    @media (max-width:700px){.menu{grid-template-columns:repeat(2,1fr)}}
-    .menu-item{background:linear-gradient(180deg,#fff,#ffeedd);border-radius:14px;padding:14px;box-shadow:0 10px 22px rgba(16,16,16,0.08);display:flex;flex-direction:column;border:2px solid #ffd29f}
-    .menu-item h4{margin:4px 0;color:#e85d04}
-    .price{margin-top:auto;font-weight:800;color:#d9480f}
+.hero img{
+  width:320px;
+  border-radius:20px;
+  box-shadow:var(--shadow);
+}
 
-    footer{margin-top:40px;color:var(--muted);font-size:14px;display:flex;justify-content:space-between;align-items:center}
+.menu{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:24px;
+  padding:40px;
+}
 
-    .floating{transform:translateY(0);animation:float 4s ease-in-out infinite}
-    @keyframes float{0%{transform:translateY(0)}50%{transform:translateY(-10px)}100%{transform:translateY(0)}}
-  </style>
+.menu-item{
+  background:var(--card-bg);
+  padding:20px;
+  border-radius:14px;
+  box-shadow:var(--shadow);
+  transition:.3s;
+}
+
+.menu-item:hover{
+  transform:scale(1.04);
+}
+
+.menu-item img{
+  width:100%;
+  border-radius:10px;
+  margin-bottom:10px;
+}
+
+.contact{
+  padding:40px;
+  text-align:center;
+  background:var(--card-bg);
+  margin:30px;
+  border-radius:18px;
+  box-shadow:var(--shadow);
+}
+
+footer{
+  text-align:center;
+  padding:20px;
+  margin-top:40px;
+}
+</style>
 </head>
+
 <body>
-  <main class="container">
-    <section class="hero">
-      <div>
-        <span class="badge">NEW — Limited-Time Recipe</span>
-        <h1>Aktar Samosa<br><small style="font-size:18px;font-weight:600;color:var(--muted);">Hot. Crisp. Legendary.</small></h1>
-        <p class="lead">Hand-folded samosas made from fresh potatoes, aromatic spices, and a flaky golden crust. Vegan-friendly options available. Ready in minutes — order for pickup or delivery.</p>
 
-        <div class="cta-row">
-          <button class="btn btn-primary" onclick="orderNow()">Order Now — Hot & Fast</button>
-          <button class="btn btn-ghost" onclick="viewMenu()">View Menu</button>
-        </div>
+<nav>
+  <h2 style="color:var(--primary);margin:0;">Aktar Samosa</h2>
+  <div>
+    <a href="#home">Home</a>
+    <a href="#menu-section">Menu</a>
+    <a href="#contact">Contact</a>
+  </div>
+</nav>
 
-        <div class="highlights">
-          <div class="pill"><strong>100% Fresh</strong><span>Daily-batched fillings</span></div>
-          <div class="pill"><strong>Family Recipe</strong><span>Secret spice blend</span></div>
-          <div class="pill"><strong>Delivery</strong><span>Under 30 minutes</span></div>
-        </div>
+<section class="hero" id="home">
+  <h1 style="font-size:46px;color:var(--primary);">Fresh • Crispy • Famous</h1>
+  <p style="font-size:20px;margin-top:10px;">The most iconic samosas in the city.</p>
 
-        <div class="menu" id="menu">
-          <div class="menu-item">
-            <h4>Classic Aloo Samosa</h4>
-            <p class="muted">Mashed potatoes, peas, and Aktar spice.</p>
-            <div class="price">₹40</div>
-          </div>
-          <div class="menu-item">
-            <h4>Paneer & Corn</h4>
-            <p class="muted">Creamy paneer with sweetcorn & herbs.</p>
-            <div class="price">₹55</div>
-          </div>
-          <div class="menu-item">
-            <h4>Chili Chicken</h4>
-            <p class="muted">Spicy shredded chicken (non-veg).</p>
-            <div class="price">₹75</div>
-          </div>
-        </div>
+  <!-- MAIN HERO IMAGE -->
+  <img src="images/samosa1.avif" alt="Samosa Hero">
+</section>
 
-      </div>
+<section id="menu-section">
+  <h2 style="text-align:center;font-size:36px;color:var(--primary);">Our Menu</h2>
 
-      <div class="visual">
-        <div class="card floating" aria-hidden="true">
-          <!-- simple SVG samosa illustration -->
-          <svg width="360" height="300" viewBox="0 0 360 300" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <defs>
-              <linearGradient id="g1" x1="0" x2="1" y1="0" y2="1">
-                <stop offset="0%" stop-color="#FFD59A" />
-                <stop offset="100%" stop-color="#FFB74D" />
-              </linearGradient>
-            </defs>
-            <rect width="360" height="300" rx="16" fill="url(#g1)" />
-            <g transform="translate(24,24)">
-              <path d="M40 200 L160 40 L300 200 Z" fill="#F6A34D" stroke="#D96E1A" stroke-width="6"/>
-              <path d="M70 160 L210 60" stroke="#D96E1A" stroke-width="5" stroke-linecap="round"/>
-              <circle cx="120" cy="140" r="10" fill="#8B3E0A"/>
-              <circle cx="150" cy="120" r="8" fill="#8B3E0A"/>
-              <circle cx="180" cy="150" r="7" fill="#8B3E0A"/>
-            </g>
-          </svg>
-          <div style="padding:12px 6px;text-align:center;font-weight:700">Aktar's Signature Samosa</div>
-        </div>
-      </div>
-    </section>
+  <div class="menu">
 
-    <footer>
-      <div>📍 Visit us: 12 Spice Lane, Old City • Open daily 9am–11pm</div>
-      <div>☎️ <a href="tel:+911234567890">+91 12345 67890</a></div>
-    </footer>
-  </main>
+    <div class="menu-item">
+      <img src="images/samosa1.avif">
+      <h3>Classic Aloo Samosa</h3>
+      <p>Mashed potatoes, green peas, and house spices.</p>
+      <strong>₹40</strong>
+    </div>
 
-  <script>
-    function orderNow(){
-      alert('Thanks — ordering flow is a placeholder. Replace with your ordering link or widget.');
-    }
-    function viewMenu(){
-      document.getElementById('menu').scrollIntoView({behavior:'smooth'});
-    }
-  </script>
+    <div class="menu-item">
+      <img src="images/samosa2.avif">
+      <h3>Paneer Corn Samosa</h3>
+      <p>Creamy paneer with sweet corn and herbs.</p>
+      <strong>₹55</strong>
+    </div>
+
+    <div class="menu-item">
+      <img src="images/samosa3.avif">
+      <h3>Chicken Spicy Samosa</h3>
+      <p>Shredded chicken with chili garlic blend.</p>
+      <strong>₹75</strong>
+    </div>
+
+    <div class="menu-item">
+      <img src="images/samosa4.avif">
+      <h3>Special Cheese Samosa</h3>
+      <p>Melted cheese filled crispy delight.</p>
+      <strong>₹60</strong>
+    </div>
+
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <h2 style="color:var(--primary);font-size:34px;">Contact Us</h2>
+  <p><strong>📍 Address:</strong> kondwa kausar baug</p>
+  <p><strong>📞 Phone:</strong> zaid</p>
+  <p><strong>🕒 Hours:</strong> 9am – 11pm daily</p>
+</section>
+
+<footer>
+  © 2025 Aktar Samosa — Taste of Tradition
+</footer>
+
 </body>
 </html>
+
+
